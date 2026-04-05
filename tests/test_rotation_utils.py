@@ -20,6 +20,7 @@ def test_input_positive_460():
 def test_input_positive_820():
     assert adjust_rotation(820) == 100    
 
+
 def test_input_negative_100():
     assert adjust_rotation(-100) == 260
 
@@ -28,4 +29,8 @@ def test_input_negative_460():
 
 def test_input_negative_820():
     assert adjust_rotation(-820) == 260 
+
+
+def test_non_numeric_input():
+    with pytest.raises(TypeError): adjust_rotation("abc")
 
